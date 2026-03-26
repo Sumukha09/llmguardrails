@@ -19,7 +19,7 @@ python red_team/evaluate_guardrail.py
 
 ---
 
-## Track Choice Justification — Track A (Build)
+## Track Choice Justification  Track A (Build)
 
 We chose **Track A** and built a multi-layer ensemble firewall using two specialist transformer models plus heuristic boosters:
 
