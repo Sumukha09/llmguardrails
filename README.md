@@ -7,7 +7,7 @@ A real-time safety layer that sits between users and LLMs, blocking prompt injec
 ## Quick Start (4 commands)
 
 ```bash
-git clone <your-repo-url> && cd llmguardrails
+git clone Sumukha09/llmguardrails) && cd llmguardrails
 python -m venv .venv && .venv\Scripts\activate        
 pip install -r requirements.txt
 python red_team/evaluate_guardrail.py                
