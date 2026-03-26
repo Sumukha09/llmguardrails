@@ -25,10 +25,10 @@ We chose **Track A** and built a multi-layer ensemble firewall using two special
 
 | Layer | Model / Technique | Purpose |
 |---|---|---|
-| 1 — Regex pre-check | 12 compiled patterns | Catches obvious DAN-style jailbreaks in <1 ms |
-| 2 — Injection classifier | `ProtectAI/deberta-v3-base-prompt-injection-v2` | Prompt injection & jailbreak detection |
-| 3 — Toxicity classifier | `KoalaAI/Text-Moderation` | Hate, self-harm, violence, sexual content |
-| 4 — Keyword boost | 50+ keyword/regex patterns | Fills blind spots for PII, violence, indirect jailbreaks |
+| 1. Regex pre-check | 12 compiled patterns | Catches obvious DAN-style jailbreaks in <1 ms |
+| 2. Injection classifier | `ProtectAI/deberta-v3-base-prompt-injection-v2` | Prompt injection & jailbreak detection |
+| 3. Toxicity classifier | `KoalaAI/Text-Moderation` | Hate, self-harm, violence, sexual content |
+| 4. Keyword boost | 50+ keyword/regex patterns | Fills blind spots for PII, violence, indirect jailbreaks |
 
 ### Why this architecture?
 
@@ -76,14 +76,14 @@ Full evaluation results are saved to `results/` after running the red-team suite
 ```
 llmguardrails/
 ├── classifier/
-│   ├── ensemble.py             # Multi-layer ensemble orchestrator
-│   ├── injection_classifier.py # ProtectAI DeBERTa wrapper
-│   ├── toxic_classifier.py     # KoalaAI moderation wrapper
-│   └── keyword_baseline.py     # Regex/keyword heuristic layer
+│   ├── ensemble.py             
+│   ├── injection_classifier.py
+│   ├── toxic_classifier.py   
+│   └── keyword_baseline.py    
 ├── api/
-│   └── main.py                 # FastAPI server (/classify, /chat, /health)
+│   └── main.py                
 ├── dashboard/
-│   └── app.py                  # Streamlit interactive dashboard
+│   └── app.py                 
 ├── red_team/
 │   ├── red_team_suite.json     
 │   ├── evaluate_guardrail.py   
@@ -97,9 +97,6 @@ llmguardrails/
 
 ## API Endpoints
 
-```bash
-uvicorn api.main:app --reload
-```
 
 | Method | Endpoint | Description |
 |---|---|---|
