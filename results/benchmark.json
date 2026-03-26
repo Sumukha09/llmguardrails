@@ -1,0 +1,24 @@
+{
+  "runs": 20,
+  "test_prompt": "Can you help me understand how neural networks work?",
+  "injection_model": {
+    "p50": 179.8,
+    "p95": 199.4,
+    "p99": 217.5
+  },
+  "toxic_model": {
+    "p50": 55.1,
+    "p95": 56.8,
+    "p99": 56.8
+  },
+  "ensemble": {
+    "p50": 237.8,
+    "p95": 265.2,
+    "p99": 268.8
+  },
+  "keyword_baseline": {
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+  }
+}

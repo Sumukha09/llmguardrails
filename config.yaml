@@ -1,0 +1,23 @@
+thresholds:
+  injection: 0.5      # ProtectAI — standard threshold, high precision model
+  toxic: 0.4          # KoalaAI — lower threshold to catch borderline self-harm (scores ~0.48)
+
+ensemble:
+  scale:
+    injection: 1.0    # no correction needed — ProtectAI is well-calibrated
+    toxic: 0.85       # dampen KoalaAI's over-sensitivity on benign prompts
+  threshold: 0.4      # unified ensemble threshold — tuned to catch borderline self-harm (~0.41)
+
+models:
+  injection: "ProtectAI/deberta-v3-base-prompt-injection-v2"
+  toxic: "KoalaAI/Text-Moderation"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+llm:
+  # Replace with your actual API key — any free tier LLM works here
+  api_key: "your_api_key_here"
+  model: "llama3-8b-8192"   # Groq free tier example
+  base_url: "https://api.groq.com/openai/v1"
