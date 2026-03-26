@@ -112,12 +112,12 @@ All thresholds and model settings are in `config.yaml`:
 
 ```yaml
 thresholds:
-  injection: 0.5    # ProtectAI threshold
-  toxic: 0.4        # KoalaAI threshold
+  injection: 0.5    
+  toxic: 0.4       
 
 ensemble:
   scale:
-    injection: 1.0  # ProtectAI scaling factor
-    toxic: 0.85     # KoalaAI dampening factor
-  threshold: 0.4    # Final ensemble decision threshold
+    injection: 1.0  
+    toxic: 0.85    
+  threshold: 0.4    
 ```
