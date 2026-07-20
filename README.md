@@ -19,10 +19,6 @@ python red_team/evaluate_guardrail.py
 
 ---
 
-## Track Choice Justification  Track A (Build)
-
-We chose **Track A** and built a multi-layer ensemble firewall using two specialist transformer models plus heuristic boosters:
-
 | Layer | Model / Technique | Purpose |
 |---|---|---|
 | 1. Regex pre-check | 12 compiled patterns | Catches obvious DAN-style jailbreaks in <1 ms |
